@@ -36,19 +36,23 @@
         margin: 0;
         min-height: 100vh;
         font-family: "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background: linear-gradient(120deg, #ffe2f1, #d8e9ff, #e0ffe5, #fff4ce);
-        background-size: 180% 180%;
-        animation: gradientFlow 26s ease infinite;
+        background-image:
+          radial-gradient(circle at 24% 34%, rgba(255, 183, 116, 0.45), transparent 45%),
+          radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.7), transparent 55%),
+          radial-gradient(circle at 78% 68%, rgba(195, 242, 185, 0.5), transparent 40%),
+          linear-gradient(115deg, #d1e9c7 0%, #c7e0b9 35%, #e1f3cf 65%, #f6f9d8 100%);
+        background-size: 200% 200%;
+        animation: meadowFloat 32s ease-in-out infinite;
         color: var(--text-primary);
         padding: clamp(2rem, 5vw, 4rem) 1.25rem;
       }
 
-      @keyframes gradientFlow {
+      @keyframes meadowFloat {
         0% {
           background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 50%;
+          background-position: 90% 60%;
         }
         100% {
           background-position: 0% 50%;
@@ -58,12 +62,7 @@
       main {
         width: min(920px, 100%);
         margin: 0 auto;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-shadow: 0 25px 70px rgba(15, 23, 42, 0.08);
         padding: clamp(2rem, 4vw, 3.5rem);
-        backdrop-filter: blur(8px);
       }
 
       header.hero {
