@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edwin Pan — Product-minded TPM</title>
+    <title>Edwin Pan</title>
     <style>
       :root {
         color-scheme: light;
@@ -68,22 +68,21 @@
         box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
       }
 
-      .hero p.eyebrow {
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin: 0 0 0.75rem;
-      }
-
       .hero h1 {
         margin: 0;
         font-size: clamp(2.2rem, 4vw, 3.4rem);
         letter-spacing: -0.015em;
       }
 
-      .hero p {
+      .hero .intro-copy {
         margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero p {
+        margin: 0;
         font-size: 1.05rem;
         line-height: 1.6;
       }
@@ -103,7 +102,6 @@
       section h2 {
         margin: 0 0 1rem;
         font-size: 0.9rem;
-        text-transform: uppercase;
         letter-spacing: 0.25em;
         color: var(--text-muted);
       }
@@ -194,34 +192,47 @@
     <main>
       <header class="hero">
         <div>
-          <p class="eyebrow">Product-minded TPM • Foundations Research</p>
-          <h1>Hi, I'm Edwin Pan.</h1>
-          <p>
-            I'm excited about AGI that benefits all of humanity. I'm currently a Technical Program Manager at
-            <a href="https://openai.com" target="_blank" rel="noreferrer noopener">OpenAI</a> on the Foundations Research Team,
-            focusing on agentic capabilities and the high-risk/high-reward ideas that could shape the next decade of AI.
-          </p>
-          <p>When I'm not in the lab, you'll probably find me on a tennis court, with a guitar, or hanging with german shepherds.</p>
+          <h1>Edwin Pan</h1>
+          <div class="intro-copy">
+            <p>Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
+            <p>
+              I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundations Research Team. My primary focus is
+              on agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
+            </p>
+            <p>Separately, I enjoy tennis, guitar, and german shepherds.</p>
+          </div>
         </div>
         <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
       </header>
 
       <section>
+        <h2>Notable Links</h2>
+        <div class="links-row">
+          <a href="https://github.com/edwin-pan" target="_blank" rel="noreferrer noopener">https://github.com/edwin-pan</a>
+          <a
+            href="https://scholar.google.com/citations?hl=en&amp;user=1eqycqkAAAAJ"
+            target="_blank"
+            rel="noreferrer noopener"
+            >https://scholar.google.com/citations?hl=en&amp;user=1eqycqkAAAAJ</a
+          >
+          <a href="https://www.linkedin.com/in/edwinhpan" target="_blank" rel="noreferrer noopener">https://www.linkedin.com/in/edwinhpan</a>
+        </div>
+      </section>
+
+      <section>
         <h2>Professional Details</h2>
         <div class="split-grid">
           <div>
-            <p class="list-title">Technical Program Manager</p>
-            <p>OpenAI — Foundations Research</p>
+            <p class="list-title">Technical Program Manager @ OpenAI, Foundations Research</p>
           </div>
           <div>
-            <p class="list-title">Strategic Product Manager</p>
-            <p>Scale AI — Coding Agent Data</p>
+            <p class="list-title">Strategic Product Manager @ Scale AI, Coding Agent Data</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Education</h2>
+        <h2>Education Details</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">MS in Electrical Engineering, 2023</p>
@@ -235,50 +246,43 @@
       </section>
 
       <section>
-        <h2>Notable Links</h2>
-        <div class="links-row">
-          <a href="https://github.com/edwin-pan" target="_blank" rel="noreferrer noopener">GitHub</a>
-          <a href="https://scholar.google.com/citations?hl=en&amp;user=1eqycqkAAAAJ" target="_blank" rel="noreferrer noopener"
-            >Google Scholar</a
-          >
-          <a href="https://www.linkedin.com/in/edwinhpan" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-        </div>
-      </section>
-
-      <section>
-        <h2>Affiliations</h2>
+        <h2>Some past affiliations to mention.</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">Academic</p>
             <ul>
-              <li><a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener">Intelligent Systems Laboratory — Stanford</a></li>
-              <li><a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener">PAClab — Stanford Medicine</a></li>
+              <li>
+                <a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener"
+                  >https://iprl.stanford.edu/index.html#home</a
+                >
+              </li>
+              <li>
+                <a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener"
+                  >https://med.stanford.edu/pacresearch/people.html</a
+                >
+              </li>
             </ul>
           </div>
           <div>
             <p class="list-title">Professional</p>
             <ul>
-              <li><a href="https://pear.vc" target="_blank" rel="noreferrer noopener">Pear VC</a></li>
-              <li><a href="https://scale.com" target="_blank" rel="noreferrer noopener">Scale AI</a></li>
+              <li><a href="https://pear.vc" target="_blank" rel="noreferrer noopener">https://pear.vc</a></li>
+              <li><a href="https://scale.com" target="_blank" rel="noreferrer noopener">https://scale.com</a></li>
             </ul>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Notable Projects</h2>
+        <h2>Some Notable Projects</h2>
         <div class="links-row">
-          <a href="https://scale.com/research/swe_bench_pro" target="_blank" rel="noreferrer noopener">SWE-bench Pro</a>
-          <a href="https://github.com/PreSenseRadar/OpenRadar" target="_blank" rel="noreferrer noopener">OpenRadar</a>
+          <a href="https://scale.com/research/swe_bench_pro" target="_blank" rel="noreferrer noopener"
+            >https://scale.com/research/swe_bench_pro</a
+          >
+          <a href="https://github.com/PreSenseRadar/OpenRadar" target="_blank" rel="noreferrer noopener"
+            >https://github.com/PreSenseRadar/OpenRadar</a
+          >
         </div>
-      </section>
-
-      <section>
-        <h2>Introduction</h2>
-        <p>
-          My work sits at the intersection of research, engineering, and product sense. I help coordinate agentic capabilities
-          workstreams, translating ambitious research bets into grounded execution plans while keeping a pulse on the human impact.
-        </p>
       </section>
 
       <footer>© 2025 Edwin Pan. Made with &lt;3 with Codex.</footer>
