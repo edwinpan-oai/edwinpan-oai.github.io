@@ -17,19 +17,13 @@ I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundati
 Separately, I enjoy tennis, guitar, and german shepherds.
 
 
-## Professional Details
-
-Technical Program Manager @ OpenAI, Foundations Research
-Strategic Product Manager @ Scale AI, Coding Agent Data
-
-
 ## Education Details
 
-MS in Electrical Engineering, 2023
 Stanford University
+MS in Electrical Engineering
 
-BS in Electrical Engineering (CS Minor), 2020
 University of Illinois at Urbana-Champaign
+BS in Electrical Engineering
 
 ## Notable Links
 https://github.com/edwin-pan
