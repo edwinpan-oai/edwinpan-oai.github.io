@@ -12,7 +12,20 @@
         --text-primary: #0f172a;
         --text-muted: rgba(15, 23, 42, 0.75);
         --soft-line: rgba(15, 23, 42, 0.12);
-        --accent: #265ee8;
+        --highlight-rose: #f390ca;
+        --highlight-green: #a3d576;
+        --highlight-orange: #ff9365;
+        --highlight-yellow: #ffe15b;
+        --highlight-blue: #a3befa;
+        --accent: var(--highlight-blue);
+        --display-size: clamp(3rem, 6vw, 4.5rem);
+        --large-header-size: clamp(2.2rem, 5vw, 3rem);
+        --standard-header-size: clamp(1.3rem, 3vw, 1.75rem);
+        --statement-body-size: 1.25rem;
+        --large-body-size: 1.125rem;
+        --medium-body-size: 1.0625rem;
+        --standard-body-size: 1rem;
+        --small-callout-size: 0.9rem;
       }
 
       * {
@@ -70,10 +83,27 @@
         box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
       }
 
-      .hero h1 {
-        margin: 0;
-        font-size: clamp(2.2rem, 4vw, 3.4rem);
+      .display {
+        font-size: var(--display-size);
+        line-height: 1.05;
         letter-spacing: -0.015em;
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .large-header {
+        font-size: var(--large-header-size);
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        font-weight: 700;
+      }
+
+      .standard-header {
+        font-size: var(--standard-header-size);
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+        color: var(--text-primary);
       }
 
       .hero .intro-copy {
@@ -85,8 +115,39 @@
 
       .hero p {
         margin: 0;
-        font-size: 1.05rem;
+      }
+
+      .statement-body {
+        font-size: var(--statement-body-size);
+        line-height: 1.5;
+        color: var(--text-primary);
+        margin: 0;
+      }
+
+      .large-body {
+        font-size: var(--large-body-size);
         line-height: 1.6;
+        margin: 0;
+      }
+
+      .medium-body {
+        font-size: var(--medium-body-size);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .standard-body,
+      p,
+      li,
+      span {
+        font-size: var(--standard-body-size);
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      .small-callout {
+        font-size: var(--small-callout-size);
+        line-height: 1.4;
       }
 
       section {
@@ -109,16 +170,6 @@
 
       section h2 {
         margin: 0 0 1rem;
-        font-size: 0.9rem;
-        letter-spacing: 0.25em;
-        color: var(--text-muted);
-      }
-
-      p,
-      li,
-      span {
-        color: var(--text-muted);
-        line-height: 1.6;
       }
 
       ul {
@@ -136,6 +187,8 @@
       .list-title {
         font-weight: 600;
         color: var(--text-primary);
+        font-size: var(--medium-body-size);
+        margin-bottom: 0.35rem;
       }
 
       a {
@@ -200,21 +253,21 @@
     <main>
       <header class="hero">
         <div>
-          <h1>Edwin Pan</h1>
+          <h1 class="display">Edwin Pan</h1>
           <div class="intro-copy">
-            <p>Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
-            <p>
+            <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
+            <p class="large-body">
               I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundations Research Team. My primary focus is
               on agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
             </p>
-            <p>Separately, I enjoy tennis, guitar, and german shepherds.</p>
+            <p class="large-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
           </div>
         </div>
         <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
       </header>
 
       <section class="notable-links">
-        <h2>Notable Links</h2>
+        <h2 class="standard-header">Notable Links</h2>
         <div class="links-row">
           <a href="https://github.com/edwin-pan" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a
@@ -228,21 +281,21 @@
       </section>
 
       <section>
-        <h2>Education Details</h2>
+        <h2 class="standard-header">Education Details</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">Stanford University</p>
-            <p>MS in Electrical Engineering</p>
+            <p class="medium-body">MS in Electrical Engineering</p>
           </div>
           <div>
             <p class="list-title">University of Illinois at Urbana-Champaign</p>
-            <p>BS in Electrical Engineering</p>
+            <p class="medium-body">BS in Electrical Engineering</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Some past affiliations to mention.</h2>
+        <h2 class="standard-header">Some past affiliations to mention.</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">Academic</p>
@@ -268,14 +321,14 @@
       </section>
 
       <section>
-        <h2>Some Notable Projects</h2>
+        <h2 class="standard-header">Some Notable Projects</h2>
         <div class="links-row">
           <a href="https://scale.com/research/swe_bench_pro" target="_blank" rel="noreferrer noopener">SWE-bench Pro</a>
           <a href="https://github.com/PreSenseRadar/OpenRadar" target="_blank" rel="noreferrer noopener">OpenRadar</a>
         </div>
       </section>
 
-      <footer>© 2025 Edwin Pan. Made with &lt;3 with Codex.</footer>
+      <footer class="small-callout">© 2025 Edwin Pan. Made with &lt;3 with Codex.</footer>
     </main>
   </body>
 </html>
