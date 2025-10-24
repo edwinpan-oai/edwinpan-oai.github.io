@@ -274,14 +274,14 @@
         width: 0.65rem;
         height: 0.65rem;
         border: 2px solid currentColor;
+        border-top: none;
         border-left: none;
-        border-bottom: none;
-        transform: translateY(1px) rotate(45deg);
+        transform: translateY(1px) rotate(-135deg);
         transition: transform 0.2s ease;
       }
 
       a:hover::after {
-        transform: translate(2px, -2px) rotate(45deg);
+        transform: translateY(-2px) rotate(-135deg);
       }
 
       .hero-link {
