@@ -66,7 +66,8 @@
         overflow: hidden;
       }
 
-      .hero-pill {
+      .hero-pill,
+      .hero-link {
         align-self: flex-start;
         font-size: 0.95rem;
         text-transform: uppercase;
@@ -77,6 +78,10 @@
         border-radius: 999px;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.95);
+        display: inline-flex;
+        justify-content: center;
+        transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease,
+          transform 0.25s ease;
       }
 
       .hero-grid {
@@ -104,8 +109,32 @@
       .hero-profile {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
+      }
+
+      .hero-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .hero-link {
+        text-align: center;
+        padding: 0.5rem 1.35rem;
+      }
+
+      .hero-link::after {
+        content: none;
+      }
+
+      .hero-link:hover {
+        background: rgba(255, 255, 255, 0.35);
+        border-color: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 12px 28px rgba(6, 12, 25, 0.4);
+        transform: translateY(-1px);
       }
 
       .hero-profile img {
@@ -115,14 +144,6 @@
         object-fit: cover;
         border: 4px solid rgba(255, 255, 255, 0.75);
         box-shadow: 0 20px 45px rgba(3, 6, 15, 0.55);
-      }
-
-      .hero-caption {
-        font-size: var(--medium-body-size);
-        text-align: center;
-        color: rgba(255, 255, 255, 0.85);
-        line-height: 1.5;
-        margin: 0;
       }
 
       .display {
@@ -223,25 +244,33 @@
       }
 
       a {
-        color: var(--accent);
+        color: var(--text-primary);
         text-decoration: none;
         position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
       }
 
       a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 100%;
-        height: 1px;
-        background: currentColor;
-        opacity: 0.35;
-        transition: opacity 0.2s ease;
+        content: "↗";
+        font-size: 0.85em;
+        transition: transform 0.2s ease;
       }
 
       a:hover::after {
-        opacity: 1;
+        transform: translate(1px, -1px);
+      }
+
+      .hero-link {
+        color: rgba(255, 255, 255, 0.95);
+        gap: 0.35rem;
+      }
+
+      .hero-link::before {
+        content: none;
       }
 
       .links-row {
@@ -281,40 +310,37 @@
   <body>
     <main>
       <header class="hero-banner">
-        <span class="hero-pill">Foundations Research · OpenAI</span>
         <div class="hero-grid">
           <div class="hero-copy">
             <h1 class="display">Edwin Pan</h1>
             <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
             <p class="large-body">
-              I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundations Research Team. My primary focus is
-              on agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
+              I'm currently a Technical Program Manager at OpenAI, on the Foundations Research Team. My primary focus is on
+              agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
             </p>
             <p class="large-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
           </div>
           <div class="hero-profile">
             <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
-            <p class="hero-caption">Exploring agentic capabilities that can unlock the next decade of AGI progress.</p>
           </div>
         </div>
-      </header>
-
-      <section class="notable-links">
-        <h2 class="standard-header">Notable Links</h2>
-        <div class="links-row">
-          <a href="https://github.com/edwin-pan" target="_blank" rel="noreferrer noopener">GitHub</a>
+        <div class="hero-links">
+          <a class="hero-link" href="https://github.com/edwin-pan" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a
+            class="hero-link"
             href="https://scholar.google.com/citations?hl=en&amp;user=1eqycqkAAAAJ"
             target="_blank"
             rel="noreferrer noopener"
             >Google Scholar</a
           >
-          <a href="https://www.linkedin.com/in/edwinhpan" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a class="hero-link" href="https://www.linkedin.com/in/edwinhpan" target="_blank" rel="noreferrer noopener"
+            >LinkedIn</a
+          >
         </div>
-      </section>
+      </header>
 
       <section>
-        <h2 class="standard-header">Education Details</h2>
+        <h2 class="standard-header">Education</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">Stanford University</p>
@@ -328,28 +354,12 @@
       </section>
 
       <section>
-        <h2 class="standard-header">Some past affiliations to mention.</h2>
-        <div class="split-grid">
-          <div>
-            <p class="list-title">Academic</p>
-            <ul>
-              <li>
-                <a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener">Stanford IPRL</a>
-              </li>
-              <li>
-                <a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener"
-                  >Stanford PAC Lab</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="list-title">Professional</p>
-            <ul>
-              <li><a href="https://pear.vc" target="_blank" rel="noreferrer noopener">Pear VC</a></li>
-              <li><a href="https://scale.com" target="_blank" rel="noreferrer noopener">Scale AI</a></li>
-            </ul>
-          </div>
+        <h2 class="standard-header">Past Affiliations</h2>
+        <div class="links-row">
+          <a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener">Stanford IPRL</a>
+          <a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener">Stanford PAC Lab</a>
+          <a href="https://pear.vc" target="_blank" rel="noreferrer noopener">Pear VC</a>
+          <a href="https://scale.com" target="_blank" rel="noreferrer noopener">Scale AI</a>
         </div>
       </section>
 
