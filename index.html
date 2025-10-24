@@ -270,18 +270,15 @@
       }
 
       a::after {
-        content: "";
-        width: 0.65rem;
-        height: 0.65rem;
-        border: 2px solid currentColor;
-        border-top: none;
-        border-left: none;
-        transform: translateY(1px) rotate(-135deg);
+        content: "↗";
+        font-size: 0.95em;
+        line-height: 1;
+        transform: translateY(-1px);
         transition: transform 0.2s ease;
       }
 
       a:hover::after {
-        transform: translateY(-2px) rotate(-135deg);
+        transform: translateY(-3px);
       }
 
       .hero-link {
