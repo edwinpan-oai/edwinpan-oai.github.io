@@ -113,6 +113,32 @@
         gap: 1rem;
       }
 
+      .about-section {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+
+      .about-card {
+        padding: clamp(1.75rem, 4vw, 2.75rem);
+        border-radius: 32px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: linear-gradient(135deg, rgba(163, 190, 250, 0.2), rgba(243, 144, 202, 0.12));
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+
+      .section-label {
+        font-size: 0.95rem;
+        letter-spacing: 0.06em;
+        text-transform: none;
+        color: rgba(15, 23, 42, 0.6);
+        font-weight: 700;
+        margin: 0;
+      }
+
       .hero-links {
         display: flex;
         flex-wrap: wrap;
@@ -314,11 +340,6 @@
           <div class="hero-copy">
             <h1 class="display">Edwin Pan</h1>
             <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
-            <p class="large-body">
-              I'm currently a Technical Program Manager at OpenAI, on the Foundations Research Team. My primary focus is on
-              agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
-            </p>
-            <p class="large-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
           </div>
           <div class="hero-profile">
             <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
@@ -338,6 +359,17 @@
           >
         </div>
       </header>
+
+      <section class="about-section">
+        <div class="about-card">
+          <p class="section-label">About me</p>
+          <p class="statement-body">
+            I'm currently a Member of Technical Program Staff at OpenAI, on the Foundations Research Team. My primary focus is on
+            agentic capabilities, specifically on the high-risk/high-reward ideas that could shape the next decade of AI.
+          </p>
+          <p class="statement-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
+        </div>
+      </section>
 
       <section>
         <h2 class="standard-header">Education</h2>

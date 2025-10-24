@@ -35,7 +35,7 @@ The bottom should contain a smaller sentence that says:
 ## Introduction 
 Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.
 
-I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundations Research Team. My primary focus is on agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
+I'm currently a Member of Technical Program Staff at OpenAI(openai.com), on the Foundations Research Team. My primary focus is on agentic capabilities, specifically on the high-risk/high-reward ideas that could shape the next decade of AI.
 
 Separately, I enjoy tennis, guitar, and german shepherds.
 
