@@ -244,12 +244,17 @@
       }
 
       a {
-        color: var(--accent);
+        color: var(--text-primary);
         text-decoration: none;
         position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
       }
 
-      a::after {
+      a::before {
         content: "";
         position: absolute;
         left: 0;
@@ -261,8 +266,27 @@
         transition: opacity 0.2s ease;
       }
 
-      a:hover::after {
+      a::after {
+        content: "↗";
+        font-size: 0.85em;
+        transition: transform 0.2s ease;
+      }
+
+      a:hover::before {
         opacity: 1;
+      }
+
+      a:hover::after {
+        transform: translate(1px, -1px);
+      }
+
+      .hero-link {
+        color: rgba(255, 255, 255, 0.95);
+        gap: 0.35rem;
+      }
+
+      .hero-link::before {
+        content: none;
       }
 
       .links-row {
@@ -307,8 +331,10 @@
             <h1 class="display">Edwin Pan</h1>
             <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
             <p class="large-body">
-              I'm currently a Technical Program Manager at OpenAI(openai.com), on the Foundations Research Team. My primary focus is
-              on agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
+              I'm currently a Technical Program Manager at
+              <a href="https://openai.com" target="_blank" rel="noreferrer noopener">OpenAI (openai.com)</a>, on the Foundations
+              Research Team. My primary focus is on agentic capabilities, specifically the high-risk/high-reward ideas that could
+              shape the next decade of AI.
             </p>
             <p class="large-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
           </div>
