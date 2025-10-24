@@ -113,6 +113,25 @@
         gap: 1rem;
       }
 
+      .about-section {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        max-width: 720px;
+      }
+
+      .section-label {
+        font-size: 0.95rem;
+        letter-spacing: 0.06em;
+        text-transform: none;
+        color: rgba(15, 23, 42, 0.6);
+        font-weight: 700;
+        margin: 0;
+      }
+
       .hero-links {
         display: flex;
         flex-wrap: wrap;
@@ -124,10 +143,6 @@
       .hero-link {
         text-align: center;
         padding: 0.5rem 1.35rem;
-      }
-
-      .hero-link::after {
-        content: none;
       }
 
       .hero-link:hover {
@@ -256,20 +271,22 @@
 
       a::after {
         content: "↗";
-        font-size: 0.85em;
+        font-size: 0.95em;
+        line-height: 1;
+        transform: translateY(-1px);
         transition: transform 0.2s ease;
       }
 
       a:hover::after {
-        transform: translate(1px, -1px);
+        transform: translateY(-3px);
       }
 
       .hero-link {
         color: rgba(255, 255, 255, 0.95);
-        gap: 0.35rem;
+        gap: 0;
       }
 
-      .hero-link::before {
+      .hero-link::after {
         content: none;
       }
 
@@ -314,11 +331,6 @@
           <div class="hero-copy">
             <h1 class="display">Edwin Pan</h1>
             <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
-            <p class="large-body">
-              I'm currently a Technical Program Manager at OpenAI, on the Foundations Research Team. My primary focus is on
-              agentic capabilities, specifically the high-risk/high-reward ideas that could shape the next decade of AI.
-            </p>
-            <p class="large-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
           </div>
           <div class="hero-profile">
             <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
@@ -338,6 +350,15 @@
           >
         </div>
       </header>
+
+      <section class="about-section">
+        <p class="section-label">About me</p>
+        <p class="statement-body">
+          I'm currently a Member of Technical Program Staff at OpenAI, on the Foundations Research Team. My primary focus is on
+          agentic capabilities, specifically on the high-risk/high-reward ideas that could shape the next decade of AI.
+        </p>
+        <p class="statement-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
+      </section>
 
       <section>
         <h2 class="standard-header">Education</h2>
