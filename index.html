@@ -109,21 +109,22 @@
       .hero-profile {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
       }
 
       .hero-links {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         width: 100%;
         gap: 0.75rem;
         margin-top: 0.5rem;
       }
 
       .hero-link {
-        width: 100%;
         text-align: center;
+        padding: 0.5rem 1.35rem;
       }
 
       .hero-link::after {
@@ -350,7 +351,7 @@
       </header>
 
       <section>
-        <h2 class="standard-header">Education Details</h2>
+        <h2 class="standard-header">Education</h2>
         <div class="split-grid">
           <div>
             <p class="list-title">Stanford University</p>
@@ -364,28 +365,12 @@
       </section>
 
       <section>
-        <h2 class="standard-header">Some past affiliations to mention.</h2>
-        <div class="split-grid">
-          <div>
-            <p class="list-title">Academic</p>
-            <ul>
-              <li>
-                <a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener">Stanford IPRL</a>
-              </li>
-              <li>
-                <a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener"
-                  >Stanford PAC Lab</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="list-title">Professional</p>
-            <ul>
-              <li><a href="https://pear.vc" target="_blank" rel="noreferrer noopener">Pear VC</a></li>
-              <li><a href="https://scale.com" target="_blank" rel="noreferrer noopener">Scale AI</a></li>
-            </ul>
-          </div>
+        <h2 class="standard-header">Past Affiliations</h2>
+        <div class="links-row">
+          <a href="https://iprl.stanford.edu/index.html#home" target="_blank" rel="noreferrer noopener">Stanford IPRL</a>
+          <a href="https://med.stanford.edu/pacresearch/people.html" target="_blank" rel="noreferrer noopener">Stanford PAC Lab</a>
+          <a href="https://pear.vc" target="_blank" rel="noreferrer noopener">Pear VC</a>
+          <a href="https://scale.com" target="_blank" rel="noreferrer noopener">Scale AI</a>
         </div>
       </section>
 
