@@ -321,6 +321,16 @@
         gap: 0.75rem 1.5rem;
       }
 
+      .links-row a {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2em;
+      }
+
+      .links-row a::after {
+        content: none;
+      }
+
       .subsection {
         margin-top: 1rem;
       }
@@ -364,7 +374,10 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <h1 class="display">Edwin Pan</h1>
-            <p class="statement-body">Hi! I'm Edwin, and I'm excited about AGI that benefits all of humanity.</p>
+            <p class="statement-body">
+              Hi! I'm Edwin, I'm excited about Artificial General Intelligence (AGI), distributing its benefits to humanity, and
+              doing no harm.
+            </p>
           </div>
           <div class="hero-profile">
             <img src="assets/profile_photo.jpeg" alt="Portrait of Edwin Pan" />
