@@ -111,16 +111,41 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        align-self: center;
       }
 
       .about-section {
         margin-top: 0;
         padding-top: 0;
         border-top: none;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: center;
+      }
+
+      .about-copy {
         display: flex;
         flex-direction: column;
         gap: 0.85rem;
         max-width: 720px;
+      }
+
+      .about-sticker {
+        justify-self: center;
+        padding: 0.75rem;
+        border-radius: 24px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+        transform: rotate(-6deg);
+      }
+
+      .about-sticker img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
       }
 
       .section-label {
@@ -321,6 +346,15 @@
         .hero-profile {
           align-items: flex-start;
         }
+
+        .about-section {
+          grid-template-columns: 1fr;
+        }
+
+        .about-sticker {
+          justify-self: flex-start;
+          transform: rotate(-3deg);
+        }
       }
     </style>
   </head>
@@ -352,12 +386,17 @@
       </header>
 
       <section class="about-section">
-        <p class="section-label">About me</p>
-        <p class="statement-body">
-          I'm currently a Member of Technical Program Staff at OpenAI, on the Foundations Research Team. My primary focus is on
-          agentic capabilities, specifically on the high-risk/high-reward ideas that could shape the next decade of AI.
-        </p>
-        <p class="statement-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
+        <div class="about-copy">
+          <p class="section-label">About me</p>
+          <p class="statement-body">
+            I'm currently a Member of Technical Program Staff at OpenAI, on the Foundations Research Team. My primary focus is on
+            agentic capabilities, specifically on the high-risk/high-reward ideas that could shape the next decade of AI.
+          </p>
+          <p class="statement-body">Separately, I enjoy tennis, guitar, and german shepherds.</p>
+        </div>
+        <div class="about-sticker">
+          <img src="assets/openai_rddept_sticker.png" alt="OpenAI Research Department sticker" />
+        </div>
       </section>
 
       <section>
