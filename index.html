@@ -28,6 +28,14 @@
         --small-callout-size: 0.9rem;
       }
 
+      body.dark-mode {
+        color-scheme: dark;
+        background: #000000;
+        --text-primary: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.82);
+        --soft-line: rgba(255, 255, 255, 0.16);
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -39,6 +47,38 @@
         background: #ffffff;
         color: var(--text-primary);
         padding: clamp(2.25rem, 5vw, 4rem) 1.25rem 3.5rem;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 10;
+        border: 1px solid rgba(15, 23, 42, 0.18);
+        background: rgba(255, 255, 255, 0.85);
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.4rem 1.25rem;
+        border-radius: 999px;
+        cursor: pointer;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+          box-shadow 0.3s ease, transform 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22);
+      }
+
+      body.dark-mode .theme-toggle {
+        border-color: rgba(255, 255, 255, 0.35);
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
       }
 
       main {
@@ -135,7 +175,7 @@
         justify-self: center;
         padding: 0.75rem;
         border-radius: 24px;
-        border: 1px solid rgba(15, 23, 42, 0.08);
+        border: 1px solid var(--soft-line);
         background: rgba(255, 255, 255, 0.85);
         box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
         transform: rotate(-6deg);
@@ -152,7 +192,7 @@
         font-size: 0.95rem;
         letter-spacing: 0.06em;
         text-transform: none;
-        color: rgba(15, 23, 42, 0.6);
+        color: var(--text-muted);
         font-weight: 700;
         margin: 0;
       }
@@ -245,7 +285,7 @@
       section {
         padding: 2rem 0 0;
         margin-top: 2rem;
-        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        border-top: 1px solid var(--soft-line);
       }
 
       section:first-of-type {
@@ -336,7 +376,7 @@
       }
 
       footer {
-        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        border-top: 1px solid var(--soft-line);
         margin-top: 3rem;
         padding-top: 1.5rem;
         font-size: 0.9rem;
@@ -369,6 +409,9 @@
     </style>
   </head>
   <body>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+      Dark mode
+    </button>
     <main>
       <header class="hero-banner">
         <div class="hero-grid">
@@ -446,5 +489,23 @@
 
       <footer class="small-callout">© 2025 Edwin Pan. Made with &lt;3 by Codex.</footer>
     </main>
+    <script>
+      const body = document.body;
+      const themeToggle = document.getElementById("theme-toggle");
+      const savedTheme = window.localStorage.getItem("theme-preference");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.textContent = "Light mode";
+        themeToggle.setAttribute("aria-pressed", "true");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark-mode");
+        themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        window.localStorage.setItem("theme-preference", isDark ? "dark" : "light");
+      });
+    </script>
   </body>
 </html>
